@@ -29,8 +29,6 @@ transfer learning and few-shot experiment:
 python IOM_soh_fine_tune.py
 python IOM_soh_few_shot.py
 ```
-## Model
-The ‘model’ folder contains all the model structures used in this paper
 
 
 ## 📂 Project Structure
