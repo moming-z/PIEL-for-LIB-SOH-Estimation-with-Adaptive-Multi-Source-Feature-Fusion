@@ -1,8 +1,7 @@
 # PIEL Project Documentation
 
 ## Overview
-The PIEL (Project for Image-based Estimation of Light) project is focused on the development of advanced methodologies for light estimation in images using adaptive multi-source feature fusion techniques. This framework supports the extraction and integration of features from various sources, enhancing the accuracy and robustness of estimations.
-
+The code used in paper ##Physics-Informed Ensemble Learning for Lithium-Ion Battery SOH Estimation with Adaptive Physical-statistical Feature Fusion is inthis project.
 ## Features
 - Adaptive multi-source feature fusion
 - Robust light estimation algorithms
