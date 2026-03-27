@@ -1,7 +1,7 @@
 # PIEL Project Documentation
 
 ## Overview
-The code used in paper "Physics-Informed Ensemble Learning for Lithium-Ion Battery SOH Estimation with Adaptive Physical-statistical Feature Fusion" is in this project.
+The code used in paper, named "Physics-Informed Ensemble Learning for Lithium-Ion Battery SOH Estimation with Adaptive Physical-statistical Feature Fusion" is in this project.
 
 ## Installation
 To install the dependencies and set up the project, please run the following commands:
@@ -19,6 +19,12 @@ comparative experiment:
 IOM_soh_duibi_cnn_mlp.py
 IOM_soh_duibi_patchtst_informer.py
 ```
+
+ablation experiment:
+```bash
+IOM_soh_xiaorong.py
+```
+
 transfer learning and few-shot experiment:
 ```bash
 IOM_soh_fine_tune.py
@@ -26,7 +32,7 @@ IOM_soh_few_shot.py
 ```
 
 ## Datasets
-The datasets used for training and evaluation are available in the `data/` directory. Please ensure you have proper access to the datasets before running the scripts.
+TJU dataset:
 
 ## Model Architecture
 The model leverages convolutional neural networks (CNNs) combined with feature fusion techniques to enhance performance. A detailed architecture diagram is provided in the `docs/` directory.
