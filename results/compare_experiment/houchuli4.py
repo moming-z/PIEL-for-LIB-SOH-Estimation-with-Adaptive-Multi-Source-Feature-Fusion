@@ -35,7 +35,7 @@ def huitu(y_pre,y_true,losslist,epochs,valid_rmses,flag,test_flag,condition,mode
     plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
     plt.legend()
     # plt.show()
-    plt.savefig(rf'F:\soh\first\results\compare_experiment2\{material+condition}\{epochss}_{seed}_{ci}_result\{model_flag}_pre-true.png')
+    plt.savefig(rf'F:\soh\first\results\compare_experiment\{material+condition}\{epochss}_{seed}_{ci}_result\{model_flag}_pre-true.png')
 
     if test_flag == 0:
         plt.figure(figsize=(10, 6))
@@ -48,7 +48,7 @@ def huitu(y_pre,y_true,losslist,epochs,valid_rmses,flag,test_flag,condition,mode
         plt.rcParams['font.sans-serif'] = ['SimHei']  # 指定默认字体 SimHei为黑体
         plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
         plt.legend()
-    plt.savefig(rf'F:\soh\first\results\compare_experiment2\{material+condition}\{epochss}_{seed}_{ci}_result\{model_flag}_loss.png')
+    plt.savefig(rf'F:\soh\first\results\compare_experiment\{material+condition}\{epochss}_{seed}_{ci}_result\{model_flag}_loss.png')
 
 
 
@@ -74,8 +74,8 @@ def metrics_print(name,metrics):
 if __name__ == "__main__":
     condition = 'NCACY25-1_1'
     # condition = 'LCO'
-    edata = np.load(fr'F:\soh\first\results\compare_experiment2\{condition}\1500_100_metrics\ave.npy')
-    pdata = np.load(fr'F:\soh\first\results\compare_experiment2\{condition}\1500_100_metrics\end2end.npy')
+    edata = np.load(fr'F:\soh\first\results\compare_experiment\{condition}\1500_100_metrics\ave.npy')
+    pdata = np.load(fr'F:\soh\first\results\compare_experiment\{condition}\1500_100_metrics\end2end.npy')
     print(f'直接平均：{np.mean(edata,axis=0)}')
     print(f'端到端：{np.mean(pdata,axis=0)}')
 
