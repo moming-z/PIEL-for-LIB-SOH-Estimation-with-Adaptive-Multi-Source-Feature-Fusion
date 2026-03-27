@@ -47,6 +47,7 @@ The repository is organized as follows:
 ├── oxford_soh_20251026/             # Labels for the Oxford dataset
 ├── oxford_statisitc_data_20250701/  # Statistical features for the Oxford dataset
 ├── results/                         # Directory for saving outputs, logs, and experimental results
+│   ├── conventional_experiment/     # Results for conventional studies
 │   ├── ablation_experiment/         # Results for ablation studies
 │   ├── compare_experiment/          # Results for comparative experiments
 │   ├── qianyi_experiment/           # Results for transfer learning
