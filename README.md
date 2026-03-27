@@ -1,23 +1,28 @@
 # PIEL Project Documentation
 
 ## Overview
-The code used in paper ##Physics-Informed Ensemble Learning for Lithium-Ion Battery SOH Estimation with Adaptive Physical-statistical Feature Fusion is inthis project.
-## Features
-- Adaptive multi-source feature fusion
-- Robust light estimation algorithms
-- Comprehensive evaluation metrics for model performance
-- User-friendly scripts for data processing and model evaluation
+The code used in paper "Physics-Informed Ensemble Learning for Lithium-Ion Battery SOH Estimation with Adaptive Physical-statistical Feature Fusion" is in this project.
 
 ## Installation
 To install the dependencies and set up the project, please run the following commands:
 ```bash
-pip install -r requirements.txt
+pip install torch=2.4.1
 ```
 
-## Quick Start
-To quickly start with the project, you can use the provided scripts as follows:
+## script
+conventional experiment:
 ```bash
-python main.py --config config.yaml
+IOM_soh_try.py
+```
+comparative experiment:
+```bash
+IOM_soh_duibi_cnn_mlp.py
+IOM_soh_duibi_patchtst_informer.py
+```
+transfer learning and few-shot experiment:
+```bash
+IOM_soh_fine_tune.py
+IOM_soh_few_shot.py
 ```
 
 ## Datasets
