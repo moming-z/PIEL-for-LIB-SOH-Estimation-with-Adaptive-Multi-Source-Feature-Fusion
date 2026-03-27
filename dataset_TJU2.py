@@ -15,7 +15,7 @@ sfolder = rf'F:\soh\first\{material}\TJU_statisitc_data3_cleared'
 pfolder = rf'F:\soh\first\{material}\TJU_1R_IOM_ga_data3_cleared'
 sohfolder = rf'F:\soh\TJU\{material}_cleared'
 
-select = [0,1,2,3,4,5,9,10,12,13]#删去电荷量交叉熵和电荷量偏度、以及所有的增量和时间
+select = [0,1,2,3,4,5,7,8,10,11]#删去电荷量交叉熵和电荷量偏度
 # select = [0,1,2,3,4,5,8,9,10,11,12,13]
 sta_train = [pd.read_csv(os.path.join(sfolder,trainname),header=None) for trainname in train_files ]
 s_train = pd.concat(sta_train,axis=0,ignore_index=True).values[:,select]
