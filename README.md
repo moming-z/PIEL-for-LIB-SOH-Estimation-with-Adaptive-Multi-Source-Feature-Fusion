@@ -29,7 +29,14 @@ transfer learning and few-shot experiment:
 python IOM_soh_fine_tune.py
 python IOM_soh_few_shot.py
 ```
+## 🛠️ Installation & Requirements
 
+It is highly recommended to use [Conda](https://docs.conda.io/) to manage your Python environment. The code has been tested with **Python 3.10**.
+
+**1. Clone the repository:**
+```bash
+git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+cd your-repo-name
 
 ## 📂 Project Structure
 
