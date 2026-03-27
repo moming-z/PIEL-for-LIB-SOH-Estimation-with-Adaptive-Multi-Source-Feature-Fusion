@@ -9,15 +9,17 @@ import torch
 import torch.nn as nn
 
 class PatchEmbedding(nn.Module):
-    def __init__(self, patch_size, d_model, activation='relu'):
+    def __init__(self, patch_size, d_model, max_patches=10):
         super(PatchEmbedding, self).__init__()
         self.patch_size = patch_size
         self.projection = nn.Linear(patch_size, d_model)
-        self.activation = nn.ReLU()
+        self.position_embedding = nn.Parameter(torch.randn(1, max_patches, 1,d_model))
+        self.d_model = d_model
     def forward(self, x):
         x = x.unfold(1, self.patch_size, self.patch_size)
-        x = self.projection(x) 
-        x = self.activation(x)
+        bs, num_patches, _, _ = x.shape
+        x = self.projection(x)
+        x = x + self.position_embedding[:, :num_patches,:, :].cuda()
         return x
 
 class PATCHTST(nn.Module):
