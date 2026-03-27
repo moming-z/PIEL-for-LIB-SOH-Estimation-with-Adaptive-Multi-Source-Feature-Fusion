@@ -1,8 +1,7 @@
 # PIEL Project Documentation
 
 ## Overview
-The code used in paper, named "Physics-Informed Ensemble Learning for Lithium-Ion Battery SOH Estimation with Adaptive Physical-statistical Feature Fusion" is in this project.
-
+This repository contains the official code for the paper "Physics-Informed Ensemble Learning for Lithium-Ion Battery SOH Estimation with Adaptive Physical-Statistical Feature Fusion".
 ## Installation
 To install the dependencies and set up the project, please run the following commands:
 ```bash
@@ -30,47 +29,32 @@ transfer learning and few-shot experiment:
 IOM_soh_fine_tune.py
 IOM_soh_few_shot.py
 ```
+## Model
+The ‘model’ folder contains all the model structures used in this paper
+
+### Dataset Storage / Data Structure
+
+* **TJU Datasets:**
+    * **Physical information & Statistical features:** Stored in the `NCA` and `NCM` folders.
+    * **Labels & Capacity data:** Stored in the `TJU` folder/file.
+
+* **Oxford Datasets:**
+    * **Physical information:** Stored in the `1R_IOM_ga_data_250630` folder.
+    * **Statistical features:** Stored in the `oxford_statisitc_data_20250701` folder.
+    * **Labels:** Stored in the `oxford_soh_20251026` folder.
+    * **Capacity data:** Saved in the `oxford` folder.
 
 ## Datasets
-TJU dataset:
+TJU datasets 的物理信息和统计特征保存在NCA和NCM文件夹中，标签和容量数据保存在TJU文件中
+Oxford datasets的物理信息存储在1R_IOM_ga_data_250630文件夹中，统计特征存储在oxford_statisitc_data_20250701文件夹中，标签存储在oxford_soh_20251026文件夹中，容量数据保存在oxford文件夹中
 
-## Model Architecture
-The model leverages convolutional neural networks (CNNs) combined with feature fusion techniques to enhance performance. A detailed architecture diagram is provided in the `docs/` directory.
+
 
 ## Evaluation Metrics
 The evaluation of model performance is based on several metrics including:
 - Mean Absolute Error (MAE)
 - Root Mean Square Error (RMSE)
 - R-squared (R²)
+  
 
-## Project Structure
-The overall structure of the project is organized as follows:
-```
-PIEL/
-├── data/
-├── docs/
-├── scripts/
-├── main.py
-└── requirements.txt
-```
 
-## Usage Tips
-- Always check for the latest updates in the repository.
-- Use virtual environments to manage dependencies effectively.
-
-## Scripts Explanation
-- `main.py`: The main script that runs the light estimation model.
-- `data_preprocess.py`: Script for preprocessing datasets before training.
-- `evaluate.py`: Script for evaluating the model's performance.
-
-## Citations
-For academic usage or reference, please cite this project as follows:
-```
-@misc{piel2026,
-    title={PIEL: Image-based Estimation of Light},
-    author={Author Name},
-    year={2026},
-    publisher={GitHub},
-    url={https://github.com/moming-z/PIEL-for-LIB-SOH-Estimation-with-Adaptive-Multi-Source-Feature-Fusion},
-}
-```
