@@ -74,8 +74,8 @@ print(f'--------训练的工况为：{material+condition}--------')
 for ci in range(cishu):
 
     # 已经创建过文件夹，无需再创建
-    os.makedirs(fr'F:\soh\first\results\compare_experiment2\{material+condition}\{epochs}_{seed}_{ci}_result', exist_ok=True)
-    os.makedirs(fr'F:\soh\first\results\compare_experiment2\{material+condition}\{epochs}_{seed}_metrics', exist_ok=True)
+    os.makedirs(fr'F:\soh\first\results\compare_experiment\{material+condition}\{epochs}_{seed}_{ci}_result', exist_ok=True)
+    os.makedirs(fr'F:\soh\first\results\compare_experiment\{material+condition}\{epochs}_{seed}_metrics', exist_ok=True)
 
     print(f'---------------第{ci+1}次训练开始---------------')
 
@@ -86,7 +86,7 @@ for ci in range(cishu):
     print(patch_num)  # 计算模型参数量
     model_flag1 = 'patchtst'
     if test_flag == 1:
-        weights_path = rf'F:\soh\first\results\compare_experiment2\{condition}\{epochs}_{seed}_{ci}_result\patchtst_weights.pth'
+        weights_path = rf'F:\soh\first\results\compare_experiment\{condition}\{epochs}_{seed}_{ci}_result\patchtst_weights.pth'
         patchtst.load_state_dict(torch.load(weights_path, weights_only=True))
     loss = nn.MSELoss()
     optimizer = optim.Adam(patchtst.parameters(), lr)  # 这里的weight_decay就是L2正则化项在损失中的权重
@@ -103,7 +103,7 @@ for ci in range(cishu):
     print(informer_num)  # 计算模型参数量
     model_flag2 = 'informer'
     if test_flag == 1:
-        weights_path = rf'F:\soh\first\results\compare_experiment2\{condition}\{epochs}_{seed}_{ci}_result\informer_weights.pth'
+        weights_path = rf'F:\soh\first\results\compare_experiment\{condition}\{epochs}_{seed}_{ci}_result\informer_weights.pth'
         informer.load_state_dict(torch.load(weights_path, weights_only=True))
     loss2 = nn.MSELoss()
     optimizer2 = optim.Adam(informer.parameters(), lr)  # 这里的weight_decay就是L2正则化项在损失中的权重
@@ -124,8 +124,8 @@ for ci in range(cishu):
     print(end_time-start_time)
     print('耗时')
 
-np.save(fr'F:\soh\first\results\compare_experiment2\{material+condition}\{epochs}_{seed}_metrics\patchtst.npy',smetrics)
-np.save(fr'F:\soh\first\results\compare_experiment2\{material+condition}\{epochs}_{seed}_metrics\informer.npy',xmetrics)
+np.save(fr'F:\soh\first\results\compare_experiment\{material+condition}\{epochs}_{seed}_metrics\patchtst.npy',smetrics)
+np.save(fr'F:\soh\first\results\compare_experiment\{material+condition}\{epochs}_{seed}_metrics\informer.npy',xmetrics)
 
 
 print(f'--------训练的工况为：{material+condition}，种子是{seed}，训练轮数是{epochs}，PATCHTST参数量{patch_num}，Informer参数量{informer_num}--------')
