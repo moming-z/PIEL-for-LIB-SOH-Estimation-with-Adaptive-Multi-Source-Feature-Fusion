@@ -9,6 +9,8 @@ conda create -n bms python=3.8
 conda activate bms
 pip install -r requirements.txt
 ```
+## Data
+The data used in this work are publicly available open datasets, including: TJU dataset(https://zenodo.org/records/6405084) and Oxford dataset(https://ora.ox.ac.uk/objects/uuid:03ba4b01-cfed-46d3-9b1a-7d4a7bdf6fac).
 
 ## script
 conventional experiment:
